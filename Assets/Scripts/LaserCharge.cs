@@ -44,6 +44,6 @@ public class LaserCharge : MonoBehaviour
     void AddBarCharge()
     {
         chargeBar.fillAmount = Math.Clamp(chargeLevel / maxCharge, 0, 1);
-        chargeBar.color = Color.Lerp(Color.red, Color.yellow, chargeLevel / maxCharge);
+        chargeBar.color = Color.Lerp(new Color(1.0f, 0.64f, 0.0f), Color.yellow, chargeLevel / maxCharge);
     }
 }
