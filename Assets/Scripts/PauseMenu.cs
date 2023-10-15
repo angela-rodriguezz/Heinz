@@ -11,10 +11,13 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     Transform creditsScreen;
 
+    [SerializeField]
+    Transform tutorialScreen;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Time.timeScale = 0f;
     }
 
     // Update is called once per frame
@@ -28,6 +31,7 @@ public class PauseMenu : MonoBehaviour
         //gamePaused = true;
         creditsScreen.gameObject.SetActive(false);
         pauseScreen.gameObject.SetActive(true);
+        tutorialScreen.gameObject.SetActive(false);
         Time.timeScale = 0f;
     }
 
@@ -36,6 +40,7 @@ public class PauseMenu : MonoBehaviour
         //gamePaused = false;
         creditsScreen.gameObject.SetActive(false);
         pauseScreen.gameObject.SetActive(false);
+        tutorialScreen.gameObject.SetActive(false);
         Time.timeScale = 1f;
     }
 
@@ -44,6 +49,16 @@ public class PauseMenu : MonoBehaviour
         //gamePaused = true;
         creditsScreen.gameObject.SetActive(true);
         pauseScreen.gameObject.SetActive(false);
+        tutorialScreen.gameObject.SetActive(false);
+        Time.timeScale = 0f;
+    }
+
+    public void HowToPlay()
+    {
+        //gamePaused = true;
+        tutorialScreen.gameObject.SetActive(true);
+        pauseScreen.gameObject.SetActive(false);
+        creditsScreen.gameObject.SetActive(false);
         Time.timeScale = 0f;
     }
 
