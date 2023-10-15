@@ -9,12 +9,12 @@ public class Item : MonoBehaviour
     [SerializeField] private Transform player;
     private Vector2 target;
     [SerializeField] private float damage = 5;
-    [SerializeField] private Health doofHealth;
+    [SerializeField] private GameManager doofHealth;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        target = new Vector2(player.position.x, player.position.y + 4);
+        target = new Vector2(player.position.x - 1, player.position.y + 8);
     }
 
     // Update is called once per frame
