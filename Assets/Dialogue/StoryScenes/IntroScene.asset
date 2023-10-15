@@ -35,7 +35,7 @@ MonoBehaviour:
     voiceline: {fileID: 0}
   - text: "Doctor\u2013 What is that thing? What have you done?"
     speaker: {fileID: 11400000, guid: 20b2394b0c78105429770c4840e0fa1c, type: 2}
-    voiceline: {fileID: 0}
+    voiceline: {fileID: 8300000, guid: c18fb549e73678d418989dfacd84eb58, type: 3}
   - text: Only what is right.
     speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
     voiceline: {fileID: 8300000, guid: 38957658643c6b24ba77dd4f8ae03dff, type: 3}
