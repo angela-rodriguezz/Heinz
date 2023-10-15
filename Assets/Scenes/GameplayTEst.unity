@@ -900,6 +900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd2e0d2791595d545b0a64ac50a61118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnim: {fileID: 0}
   speed: 1.5
   rotationSpeed: 2
 --- !u!1 &1189247376
@@ -1557,6 +1558,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &1758554284 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1758554284, guid: f0eb8b581c02d2448ab32e1fd906f34f, type: 3}
+  m_PrefabInstance: {fileID: 3218840519991111768}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3218840519991111768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1564,10 +1570,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3218840520014054821, guid: f0eb8b581c02d2448ab32e1fd906f34f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 5ed230f78fb60b340acffaa20d57ba50, type: 3}
     - target: {fileID: 3218840520519672552, guid: f0eb8b581c02d2448ab32e1fd906f34f, type: 3}
       propertyPath: m_Name
       value: Doctor
@@ -1647,10 +1649,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 720586371, guid: f89c26eedde415f4499b3bb62bc9b746, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3370111501976842594, guid: f89c26eedde415f4499b3bb62bc9b746, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1793,14 +1791,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6559607507042084979, guid: 960f89452e8aa824db5e7ba898d8f454, type: 3}
-      propertyPath: defIcon
-      value: 
-      objectReference: {fileID: 21300000, guid: 5c1e93682e920a249914e956b9d3f310, type: 3}
-    - target: {fileID: 6559607507042084979, guid: 960f89452e8aa824db5e7ba898d8f454, type: 3}
-      propertyPath: iconAnim
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6559607507042084979, guid: 960f89452e8aa824db5e7ba898d8f454, type: 3}
       propertyPath: chargeBar
       value: 
       objectReference: {fileID: 3370111502986010913}
@@ -1809,17 +1799,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3370111502736128808}
     - target: {fileID: 6559607507042084979, guid: 960f89452e8aa824db5e7ba898d8f454, type: 3}
-      propertyPath: maxCharge
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6559607507042084979, guid: 960f89452e8aa824db5e7ba898d8f454, type: 3}
-      propertyPath: maxHealth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6559607507042084979, guid: 960f89452e8aa824db5e7ba898d8f454, type: 3}
-      propertyPath: chargeIcon
+      propertyPath: playerAnim
       value: 
-      objectReference: {fileID: 21300000, guid: a6ff88a107b1bee4fab4b1354b814f28, type: 3}
+      objectReference: {fileID: 1758554284}
     - target: {fileID: 6559607507042084979, guid: 960f89452e8aa824db5e7ba898d8f454, type: 3}
       propertyPath: canChargeIcon
       value: 
@@ -1894,6 +1876,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7762091203544107998, guid: 817c9ad561a9d5743aafbbd93340a82d, type: 3}
+      propertyPath: playerAnim
+      value: 
+      objectReference: {fileID: 1758554284}
     - target: {fileID: 7762091205094020442, guid: 817c9ad561a9d5743aafbbd93340a82d, type: 3}
       propertyPath: m_Name
       value: Robot Arm

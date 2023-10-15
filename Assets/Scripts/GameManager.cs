@@ -10,8 +10,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Image chargeBar;
     [SerializeField] private float maxCharge;
     private float chargeLevel = 0;
-    [SerializeField] private float addedCharge = 1;
-    [SerializeField] private float chargeLoss = (float)0.2;
+    [SerializeField] private float addedCharge = 2;
+    [SerializeField] private float chargeLoss = (float)0.05;
     
     #endregion
 
@@ -22,20 +22,34 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float healthIncrease = (float)0.1;
     #endregion
 
-    #region bools
-    [SerializeField] public bool canCharge;
+    #region bools/timers
+    public bool canCharge;
     //[SerializeField] Animator iconAnim;
     [SerializeField] Sprite defIcon;
+    [SerializeField] Sprite switchingIcon;
     [SerializeField] Sprite chargeIcon;
     [SerializeField] Image canChargeIcon;
+
+    protected bool isSwitching = false;
+    private float switchTimer = 0;
+    [SerializeField] float switchTime = 2f;
+    private float chargeTimer = 0;
+    [SerializeField] float chargeTime = 0.25f;
+
     #endregion
+
+    #region player stuffs
+    [SerializeField] Animator playerAnim;
+    #endregion
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         canCharge = false;
         curHealth = maxHealth;
-        UpdateCanChargeIcon();
+        UpdateCanCharge();
     }
 
     // Update is called once per frame
@@ -46,26 +60,30 @@ public class GameManager : MonoBehaviour
             curHealth += healthIncrease * Time.deltaTime;
             SetHealth(curHealth);
         }
-        if (Input.GetKeyDown(KeyCode.Q) && canCharge == false)
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            canCharge = true;
-            UpdateCanChargeIcon();
-        }
-        else if (Input.GetKeyDown(KeyCode.Q) && canCharge == true)
-        {
-            canCharge = false;
-            UpdateCanChargeIcon();
+            Switch();
         }
         if (Input.GetKeyDown(KeyCode.Space) && canCharge)
         {
-            chargeLevel += addedCharge;
-            AddBarCharge();
+            
+            Charge();
         }
         if (chargeLevel > 0)
         {
             chargeLevel -= chargeLoss * Time.deltaTime;
             AddBarCharge();
         }
+
+        if (switchTimer > 0)
+        {
+            switchTimer -= Time.deltaTime;
+        }
+        if (chargeTimer > 0)
+        {
+            chargeTimer -= Time.deltaTime;
+        }
+        UpdateCanCharge();
     }
 
     void AddBarCharge()
@@ -81,10 +99,16 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void UpdateCanChargeIcon()
+    void UpdateCanCharge()
     {
+        
         if (canChargeIcon != null)
         {
+            if (isSwitching == true)
+            {
+                canChargeIcon.sprite = switchingIcon;
+                return;
+            }
             if (canCharge == false)
             {
                 canChargeIcon.sprite = defIcon;
@@ -95,5 +119,96 @@ public class GameManager : MonoBehaviour
             }
         }
         
+    }
+
+    void Charge()
+    {
+        if (chargeTimer <= 0)
+        {
+            Debug.Log("CHARGE");
+            chargeTimer = chargeTime;
+            StartCoroutine("ChargeRoutine");
+            
+        }
+    }
+
+    void Switch()
+    {
+        if (switchTimer <= 0)
+        {
+            isSwitching = true;
+            Debug.Log("SWITCH");
+            UpdateCanCharge();
+            StartCoroutine("SwitchRoutine");
+            switchTimer = switchTime;
+            isSwitching = false;
+            UpdateCanCharge();
+        }
+    }
+
+    public IEnumerator ChargeRoutine()
+    {
+
+        // anim
+        if (playerAnim != null)
+        {
+            playerAnim.SetTrigger("Crank");
+        }
+        // sound
+        //wait
+        yield return new WaitForSeconds(chargeTime);
+
+        // action
+        chargeLevel += addedCharge;
+        AddBarCharge();
+        // wait seconds
+        
+        yield return null;
+    }
+
+    public IEnumerator SwitchRoutine()
+    {
+        Debug.Log("SWITCH ROUTINE");
+        // anim
+        if (playerAnim != null)
+        {
+            playerAnim.SetBool("Walking", true);
+        }
+        // sound
+
+        // action
+        UpdateCanCharge();
+        if (canCharge == false)
+        {
+            canCharge = true;
+            if (playerAnim != null)
+            {
+                playerAnim.SetFloat("WalkDir", -1);
+            }
+            // wait seconds
+            yield return new WaitForSeconds(0.1f);
+            if (playerAnim != null)
+            {
+                playerAnim.SetBool("CanCharge", true);
+                playerAnim.SetBool("Walking", false);
+            }
+        }
+        else if (canCharge == true)
+        {
+            canCharge = false;
+            if (playerAnim != null)
+            {
+                playerAnim.SetFloat("WalkDir", 1);
+            }
+            // wait seconds
+            yield return new WaitForSeconds(0.1f);
+            if (playerAnim != null)
+            {
+                playerAnim.SetBool("CanCharge", false);
+                playerAnim.SetBool("Walking", false);
+            }
+        }
+
+        yield return null;
     }
 }
