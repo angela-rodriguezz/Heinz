@@ -50,7 +50,7 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1034714291463762968, guid: f4c35090dbeeada4f8acb72e371c34e2, type: 3}
   speed: 0
   player: {fileID: 0}
-  damage: 5
+  damage: 10
   doofHealth: {fileID: 0}
   rb2D: {fileID: 6613499270297537730}
   thrust: 750
