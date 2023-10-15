@@ -10,7 +10,7 @@ public class Perry : MonoBehaviour
     [SerializeField] private GameManager functioner;
 
     #region Shooting Mechanic Variables
-    private float timetoShoot;
+    public float timetoShoot;
     public float startTimeShot;
 
     #endregion

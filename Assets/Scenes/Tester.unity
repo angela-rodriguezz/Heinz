@@ -366,6 +366,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drDoof: {fileID: 1758554286}
   item: {fileID: 106265823}
+  functioner: {fileID: 315940406}
+  timetoShoot: 0
   startTimeShot: 3
 --- !u!95 &186783110
 Animator:
