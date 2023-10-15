@@ -40,8 +40,6 @@ public class GameManager : MonoBehaviour
 
     #region player stuffs
     [SerializeField] Animator playerAnim;
-    [SerializeField] Animator enemyAnim;
-    [SerializeField] Perry perry;
     #endregion
 
 
@@ -226,33 +224,6 @@ public class GameManager : MonoBehaviour
         yield return null;
     }
 
-
-    #region Perry Animations
-
-    public IEnumerator AnimActivate()
-    {
-        yield return new WaitForSeconds(0.1f);
-
-    }
-
-    public void ThrowBomb()
-    {
-        if (perry.timetoShoot > 0)
-        {
-            enemyAnim.SetBool("Throwing", false);
-        } else
-        {
-            enemyAnim.SetBool("Throwing", true);
-            AnimActivate();
-        }
-    }
-
-    void AgentHurt()
-    {
-
-    }
-    #endregion
-
     //straight up lose.
     public void Die()
     {
@@ -273,5 +244,4 @@ public class GameManager : MonoBehaviour
     {
 
     }
-
 }
