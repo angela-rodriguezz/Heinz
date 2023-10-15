@@ -244,4 +244,9 @@ public class GameManager : MonoBehaviour
     {
 
     }
+
+    void ThrowBomb()
+    {
+
+    }
 }

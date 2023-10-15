@@ -7,6 +7,7 @@ public class Perry : MonoBehaviour
 {
     [SerializeField] private Transform drDoof;
     [SerializeField] private GameObject item;
+    [SerializeField] private GameManager functioner;
 
     #region Shooting Mechanic Variables
     private float timetoShoot;
@@ -23,6 +24,7 @@ public class Perry : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        functioner.ThrowBomb();
         if (timetoShoot <= 0)
         {
             GameObject projectile = Instantiate(item, transform.position, Quaternion.identity);
