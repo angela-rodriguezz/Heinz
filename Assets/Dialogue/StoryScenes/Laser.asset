@@ -17,26 +17,33 @@ MonoBehaviour:
   - text: "You don\u2019t know what I want!"
     speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
     voiceline: {fileID: 8300000, guid: bdd9a22a88c296b4b8bb435a702f2ab9, type: 3}
+    BG: {fileID: 21300000, guid: 83508379ac1c2db4186a8918465331a4, type: 3}
   - text: "[Heinz smacks a button. Cut to city exploding and Heinz\u2019s lab coat
       billows from the balcony above.]"
     speaker: {fileID: 11400000, guid: 546ec0abce8252b4491b3e8a7d3d953e, type: 2}
     voiceline: {fileID: 0}
+    BG: {fileID: 0}
   - text: This. This city, this hell, engulfed in the very flames it set in me. This
       is everything I wanted.
     speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
     voiceline: {fileID: 8300000, guid: c27ecde00b068be4ba1f0e885fead0b0, type: 3}
+    BG: {fileID: 0}
   - text: '[Heinz turns around to find the Agent on the ground. Panic sets into his
       expression.]'
     speaker: {fileID: 11400000, guid: 546ec0abce8252b4491b3e8a7d3d953e, type: 2}
     voiceline: {fileID: 0}
+    BG: {fileID: 0}
   - text: A- agent? Wake up! Witness my glory! Agent!
     speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
     voiceline: {fileID: 8300000, guid: ee42dfee05d8bf04abf2edb607cb8bc6, type: 3}
+    BG: {fileID: 0}
   - text: "[Heinz crumbles to the ground next to the Agent\u2019s unmoving body.]"
     speaker: {fileID: 11400000, guid: 546ec0abce8252b4491b3e8a7d3d953e, type: 2}
     voiceline: {fileID: 0}
+    BG: {fileID: 0}
   - text: "Perry\u2026 what have I done?"
     speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
     voiceline: {fileID: 8300000, guid: 9b48f1338031a3d41b0dfbd40ca01e6d, type: 3}
-  background: {fileID: 0}
+    BG: {fileID: 0}
+  background: {fileID: 21300000, guid: 83508379ac1c2db4186a8918465331a4, type: 3}
   nextScene: {fileID: 0}
