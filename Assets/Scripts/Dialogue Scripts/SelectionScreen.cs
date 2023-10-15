@@ -16,22 +16,25 @@ public class SelectionScreen : MonoBehaviour
     private ChooseScene main; // current choice scene
 
     // Timer Variables
+    /*
     public TextMeshProUGUI timerText;
     private float timer = 0.0f;
-    private bool activeTimer = false;
+    //private bool activeTimer = false;
     public float shakeAmount = 0.075f; // This is the amount of text shake you want to apply
     public float shakeSpeed = 50f; // This is the speed of the text shake
     private Vector3 timerOriginalPosition; // This will store the original position of the Text element
+    */
 
 
     void Start()
     {
         rectTransform = GetComponent<RectTransform>();
-        timerOriginalPosition = timerText.transform.position;
+        //timerOriginalPosition = timerText.transform.position;
     }
 
     void Update()
     {
+        /**
         if (activeTimer)
         {
             // If timer is active
@@ -58,6 +61,8 @@ public class SelectionScreen : MonoBehaviour
             timer += Time.deltaTime;
         }
     }
+        **/
+    }
 
     // Shows the scene choice options
     // sets the main to the current scene
@@ -65,25 +70,25 @@ public class SelectionScreen : MonoBehaviour
     // starts the timer
     public void SetupChoose(ChooseScene scene)
     {
-        activeTimer = true;
+        //activeTimer = true;
         StartCoroutine(EnterLoad());
         animator.SetTrigger("Show");
         main = scene;
         buttonChoice1.text = scene.labels[0].text;
         buttonChoice2.text = scene.labels[1].text;
-        timer = 0.0f;
+        //timer = 0.0f;
     }
     // Plays the scene dialogue that occurs after making the choice
     // hides the previous choices
     // hides the timer
     public void PerformChoice(int num)
     {
-        activeTimer = false;
-        timerText.gameObject.SetActive(activeTimer);
+        //activeTimer = false;
+        //timerText.gameObject.SetActive(activeTimer);
         gameController.PlayScene(main.labels[num].nextScene);
         StartCoroutine(EnterLoad());
         animator.SetTrigger("Hide");
-        timer = 0.0f;
+        //timer = 0.0f;
     }
 
     private IEnumerator EnterLoad()

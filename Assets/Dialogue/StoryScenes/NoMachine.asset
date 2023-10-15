@@ -22,7 +22,7 @@ MonoBehaviour:
     voiceline: {fileID: 8300000, guid: 58f21dc44787b95409091e7f839a70fc, type: 3}
   - text: "I\u2019m sorry. I did what I had to."
     speaker: {fileID: 11400000, guid: 20b2394b0c78105429770c4840e0fa1c, type: 2}
-    voiceline: {fileID: 0}
+    voiceline: {fileID: 8300000, guid: a52944070b7324b44bf9eee176212897, type: 3}
   - text: "No. You did what they told you to do. You don\u2019t want this."
     speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
     voiceline: {fileID: 8300000, guid: a0caf233d6d1f034c84e93d41eeecd0e, type: 3}

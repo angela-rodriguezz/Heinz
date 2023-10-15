@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 
+
 public class PlayDialogue : MonoBehaviour
 {
     [SerializeField] private GameScene currentScene;
-    [SerializeField] private DialogueManager bottomBar;
     [SerializeField] private TextMeshProUGUI barText, personNameText;
     [SerializeField] private Scenes currScene;
     [SerializeField] private AudioSource voice;
@@ -142,6 +142,7 @@ public class PlayDialogue : MonoBehaviour
     // starts negative since we are adding each time
     public void PlayScene(Scenes scene)
     {
+        currentScene = scene;
         currScene = scene;
         sentenceIndex = -1;
         PlayNextSentence();
@@ -154,6 +155,9 @@ public class PlayDialogue : MonoBehaviour
 
     public bool IsLastSentence()
     {
+        Debug.Log(sentenceIndex);
+        Debug.Log(currScene.sentences.Count);
+        Debug.Log(finished);
         return sentenceIndex + 1 == currScene.sentences.Count;
     }
 
@@ -177,7 +181,7 @@ public class PlayDialogue : MonoBehaviour
     // change the player name or color if the speaker changes
     public void PlayNextSentence()
     {
-        if (!IsLastSentence() && !finished)
+        if (!IsLastSentence() && finished == false)
         {
             lineAppear = TypeText(currScene.sentences[++sentenceIndex].text);
             if (currScene.sentences[sentenceIndex].voiceline != null)

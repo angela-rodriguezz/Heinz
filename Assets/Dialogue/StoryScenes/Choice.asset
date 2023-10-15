@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   labels:
   - text: Use Laser
-    nextScene: {fileID: 0}
-  - text: 
-    nextScene: {fileID: 0}
+    nextScene: {fileID: 11400000, guid: 3fd1e696c363c2f46b5ec760cb9e0838, type: 2}
   - text: Trust Agent
-    nextScene: {fileID: 0}
+    nextScene: {fileID: 11400000, guid: 9eac17ca434797b4f886f9cc7a7bd258, type: 2}
