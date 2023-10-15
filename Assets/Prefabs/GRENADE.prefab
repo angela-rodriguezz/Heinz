@@ -52,6 +52,9 @@ MonoBehaviour:
   player: {fileID: 0}
   damage: 10
   doofHealth: {fileID: 0}
+  perrysfx: {fileID: 0}
+  audio1: {fileID: 8300000, guid: aee7e8617446c884e8678d6d13a25aaf, type: 3}
+  audio2: {fileID: 8300000, guid: 83eb8db0d15a32b47b80dcf00195d3f0, type: 3}
   rb2D: {fileID: 6613499270297537730}
   thrust: 750
 --- !u!50 &6613499270297537730

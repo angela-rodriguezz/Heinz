@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Item : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class Item : MonoBehaviour
     private Vector2 target;
     [SerializeField] private float damage = 20;
     [SerializeField] private GameManager doofHealth;
+    [SerializeField] private AudioSource perrysfx;
+    [SerializeField] private AudioClip audio1;
+    [SerializeField] private AudioClip audio2;
+    private int rand_num;
     // Start is called before the first frame update
 
 
@@ -57,7 +62,23 @@ public class Item : MonoBehaviour
         }
         if (other.CompareTag("Player"))
         {
+            rand_num = Random.Range(0, 2);
+            AudioChoose(rand_num);
             DamagePlayer();
+        }
+    }
+
+    void AudioChoose(int number)
+    {
+        if (number == 1)
+        {
+            perrysfx.clip = audio1;
+            perrysfx.Play();
+        }
+        else if (number == 2)
+        {
+            perrysfx.clip = audio2;
+            perrysfx.Play();
         }
     }
 

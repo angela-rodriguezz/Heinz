@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
+
 public class Perry : MonoBehaviour
 {
     [SerializeField] private Transform drDoof;
     [SerializeField] private GameObject item;
     [SerializeField] private GameManager functioner;
+
 
     #region Shooting Mechanic Variables
     public float timetoShoot;
@@ -36,6 +38,8 @@ public class Perry : MonoBehaviour
             timetoShoot -= Time.deltaTime;
         }
     }
+
+    
 
     void Stun()
     {
