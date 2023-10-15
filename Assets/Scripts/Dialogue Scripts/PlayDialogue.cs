@@ -12,6 +12,7 @@ public class PlayDialogue : MonoBehaviour
     [SerializeField] private TextMeshProUGUI barText, personNameText;
     [SerializeField] private Scenes currScene;
     [SerializeField] private AudioSource voice;
+    [SerializeField] private Animator animator;
     private int sentenceIndex = -1;
     private StateTwo state2 = StateTwo.COMPLETED;
     private IEnumerator lineAppear;
@@ -61,7 +62,6 @@ public class PlayDialogue : MonoBehaviour
                     {
                         PlayNextSentence();
                     }
-
                 }
                 else
                 {
@@ -181,6 +181,7 @@ public class PlayDialogue : MonoBehaviour
     // change the player name or color if the speaker changes
     public void PlayNextSentence()
     {
+        
         if (!IsLastSentence() && finished == false)
         {
             lineAppear = TypeText(currScene.sentences[++sentenceIndex].text);
@@ -188,6 +189,10 @@ public class PlayDialogue : MonoBehaviour
             {
                 voice.clip = currScene.sentences[sentenceIndex].voiceline;
                 voice.Play();
+            }
+            if (CheckImage(currScene.sentences[sentenceIndex].BG))
+            {
+                SetImage(currScene.sentences[sentenceIndex].BG);
             }
             StartCoroutine(lineAppear);
             personNameText.text = currScene.sentences[sentenceIndex].speaker.speakerName;
@@ -223,7 +228,6 @@ public class PlayDialogue : MonoBehaviour
     #region Transitions Backgrounds
     public bool isSwitched = false;
     public Image background1;
-    public Image background2;
 
     // checks if the current scene's background isn't null
     public bool CheckImage(Sprite sprite)
@@ -246,16 +250,10 @@ public class PlayDialogue : MonoBehaviour
     // change back to the previous background, reverse fading animation begins, and is now not switched
     public void SetImage(Sprite sprite)
     {
-        if (!isSwitched)
-        {
-            background2.sprite = sprite;
-            isSwitched = !isSwitched;
-        }
-        else if (isSwitched)
-        {
             background1.sprite = sprite;
-            isSwitched = !isSwitched;
-        }
+            //animator.SetTrigger("BGShow");
+            //isSwitched = !isSwitched;
+        
     }
     #endregion
 }
