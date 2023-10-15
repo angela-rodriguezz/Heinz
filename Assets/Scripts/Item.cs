@@ -9,7 +9,7 @@ public class Item : MonoBehaviour
     [SerializeField] private Transform player;
     private Vector2 target;
     [SerializeField] private float damage = 5;
-    [SerializeField] private Health doofHealth;
+    [SerializeField] private GameManager doofHealth;
     // Start is called before the first frame update
     void Start()
     {
