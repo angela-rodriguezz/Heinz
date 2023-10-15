@@ -979,10 +979,10 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0.4
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c0129f1f6c17b4e4d92e90f5d9bbe3e7, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &923531259
 CircleCollider2D:
@@ -993,7 +993,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 923531254}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c0129f1f6c17b4e4d92e90f5d9bbe3e7, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1012,6 +1012,7 @@ GameObject:
   - component: {fileID: 942666299}
   - component: {fileID: 942666301}
   - component: {fileID: 942666302}
+  - component: {fileID: 942666303}
   m_Layer: 0
   m_Name: Agent
   m_TagString: Untagged
@@ -1128,6 +1129,32 @@ MonoBehaviour:
   functioner: {fileID: 1224742889}
   timetoShoot: 0
   startTimeShot: 3
+--- !u!61 &942666303
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942666298}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.12704897, y: -0.508193}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.8100004, y: 8.103496}
+    newSize: {x: 5.8100004, y: 8.103496}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.9302378, y: 7.0871086}
+  m_EdgeRadius: 0
 --- !u!1 &1189247376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,32 +1892,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3218840520014054820, guid: f0eb8b581c02d2448ab32e1fd906f34f, type: 3}
   m_PrefabInstance: {fileID: 3218840519991111768}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &3218840519991111770
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775495928}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.7284715, y: 0.68111515}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.5, y: 7.7021484}
-    newSize: {x: 5.5, y: 7.7021484}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.043057, y: 9.064379}
-  m_EdgeRadius: 0
 --- !u!50 &3218840519991111771
 Rigidbody2D:
   serializedVersion: 4
@@ -1912,6 +1913,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &3218840519991111773
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775495928}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.2878814, y: -3.05631}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.5, y: 7.7021484}
+    newSize: {x: 5.5, y: 7.7021484}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.9243374, y: 1.5895286}
+  m_EdgeRadius: 0
 --- !u!114 &3370111502736128808 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3370111501296464087, guid: f89c26eedde415f4499b3bb62bc9b746, type: 3}
@@ -2192,6 +2219,10 @@ PrefabInstance:
       propertyPath: playerAnim
       value: 
       objectReference: {fileID: 1758554284}
+    - target: {fileID: 7762091203544108003, guid: 817c9ad561a9d5743aafbbd93340a82d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7762091205094020442, guid: 817c9ad561a9d5743aafbbd93340a82d, type: 3}
       propertyPath: m_Name
       value: Robot Arm
