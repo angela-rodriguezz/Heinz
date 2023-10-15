@@ -12,31 +12,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b84e5d59625c14ea27d29b183968e6, type: 3}
   m_Name: Laser
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: Ending
   sentences:
   - text: "You don\u2019t know what I want!"
     speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
     voiceline: {fileID: 8300000, guid: bdd9a22a88c296b4b8bb435a702f2ab9, type: 3}
+    BG: {fileID: 21300000, guid: 83508379ac1c2db4186a8918465331a4, type: 3}
   - text: "[Heinz smacks a button. Cut to city exploding and Heinz\u2019s lab coat
       billows from the balcony above.]"
     speaker: {fileID: 11400000, guid: 546ec0abce8252b4491b3e8a7d3d953e, type: 2}
     voiceline: {fileID: 0}
+    BG: {fileID: 21300000, guid: 0b3848d54de0c1e42b367e03478ed473, type: 3}
   - text: This. This city, this hell, engulfed in the very flames it set in me. This
       is everything I wanted.
     speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
     voiceline: {fileID: 8300000, guid: c27ecde00b068be4ba1f0e885fead0b0, type: 3}
+    BG: {fileID: 21300000, guid: 53eaa867eccdba8479a452d2d6b222b6, type: 3}
   - text: '[Heinz turns around to find the Agent on the ground. Panic sets into his
       expression.]'
     speaker: {fileID: 11400000, guid: 546ec0abce8252b4491b3e8a7d3d953e, type: 2}
     voiceline: {fileID: 0}
+    BG: {fileID: 21300000, guid: d5049465997ced04a91ac6572d7651f0, type: 3}
   - text: A- agent? Wake up! Witness my glory! Agent!
     speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
     voiceline: {fileID: 8300000, guid: ee42dfee05d8bf04abf2edb607cb8bc6, type: 3}
+    BG: {fileID: 0}
   - text: "[Heinz crumbles to the ground next to the Agent\u2019s unmoving body.]"
     speaker: {fileID: 11400000, guid: 546ec0abce8252b4491b3e8a7d3d953e, type: 2}
     voiceline: {fileID: 0}
+    BG: {fileID: 0}
   - text: "Perry\u2026 what have I done?"
     speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
     voiceline: {fileID: 8300000, guid: 9b48f1338031a3d41b0dfbd40ca01e6d, type: 3}
-  background: {fileID: 0}
+    BG: {fileID: 0}
+  background: {fileID: 21300000, guid: 83508379ac1c2db4186a8918465331a4, type: 3}
   nextScene: {fileID: 0}
