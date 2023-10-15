@@ -43,5 +43,9 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
     voiceline: {fileID: 0}
     BG: {fileID: 21300000, guid: fe72aaa421bc80f47acc9c62637fb1ec, type: 3}
+  - text: ...
+    speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
+    voiceline: {fileID: 0}
+    BG: {fileID: 21300000, guid: 9717b8f27404da74ab1990f5a810b540, type: 3}
   background: {fileID: 21300000, guid: 0ef40b2745007cd41947933bbc5d199a, type: 3}
   nextScene: {fileID: 0}
