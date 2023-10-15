@@ -20,7 +20,7 @@ public class Item : MonoBehaviour
     public Rigidbody2D rb2D;
     private float horizontalBound = 5f;
     private float verticalBound = 5f;
-    private float rotationBound = 30f;
+    private float rotationBound = 0f;
     [SerializeField]
     [Tooltip("Control thrust")]
     private float thrust = 750f;

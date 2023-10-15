@@ -1859,6 +1859,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4857453550226870656, guid: c50002bc766df354ea3487df71041e17, type: 3}
+      propertyPath: m_Size.x
+      value: 3.1568646
+      objectReference: {fileID: 0}
+    - target: {fileID: 4857453550226870656, guid: c50002bc766df354ea3487df71041e17, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.106633365
+      objectReference: {fileID: 0}
     - target: {fileID: 4857453550226870658, guid: c50002bc766df354ea3487df71041e17, type: 3}
       propertyPath: m_Name
       value: FLOOR (1)

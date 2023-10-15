@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public float curHealth;
     [SerializeField] private float maxHealth;
     [SerializeField] private Image healthBar;
-    [SerializeField] private float healthIncrease = (float)0.1;
+    [SerializeField] private float healthIncrease = (float)0;
     #endregion
 
     #region bools/timers
