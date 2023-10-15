@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Choice
   m_EditorClassIdentifier: 
   labels:
-  - text: Use Laser
+  - text: USE LASER
     nextScene: {fileID: 11400000, guid: 3fd1e696c363c2f46b5ec760cb9e0838, type: 2}
-  - text: Trust Agent
+  - text: TRUST HIM
     nextScene: {fileID: 11400000, guid: 9eac17ca434797b4f886f9cc7a7bd258, type: 2}
