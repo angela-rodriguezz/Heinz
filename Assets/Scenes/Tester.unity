@@ -366,6 +366,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drDoof: {fileID: 1758554286}
   item: {fileID: 106265823}
+  functioner: {fileID: 315940406}
+  timetoShoot: 0
   startTimeShot: 3
 --- !u!95 &186783110
 Animator:
@@ -2235,7 +2237,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3218840520014054819, guid: f0eb8b581c02d2448ab32e1fd906f34f, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3218840520519672552, guid: f0eb8b581c02d2448ab32e1fd906f34f, type: 3}
       propertyPath: m_Name
