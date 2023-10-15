@@ -57,11 +57,23 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //checks
         if (curHealth < 100)
         {
             curHealth += healthIncrease * Time.deltaTime;
             SetHealth(curHealth);
         }
+        if (curHealth <= 0)
+        {
+            Die();
+        }
+        if (chargeLevel >= maxCharge)
+        {
+            Win();
+        }
+
+
+        //input
         if (Input.GetKeyDown(KeyCode.Q))
         {
             Switch();
@@ -214,6 +226,7 @@ public class GameManager : MonoBehaviour
         yield return null;
     }
 
+
     #region Perry Animations
 
     public IEnumerator AnimActivate()
@@ -239,4 +252,26 @@ public class GameManager : MonoBehaviour
 
     }
     #endregion
+
+    //straight up lose.
+    public void Die()
+    {
+        //WIP
+        return;
+    }
+
+    //starts the final ending sequence.
+    public void Win()
+    {
+        //WIP
+        Debug.Log("FULLY CHARGED");
+        return;
+    }
+
+    //starts the tutorial sequence.
+    void TutorialCards()
+    {
+
+    }
+
 }
