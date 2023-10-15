@@ -233,7 +233,7 @@ MonoBehaviour:
   speed: 10
   player: {fileID: 1758554286}
   damage: 5
-  doofHealth: {fileID: 315940406}
+  doofHealth: {fileID: 0}
 --- !u!212 &106265827
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -366,7 +366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drDoof: {fileID: 1758554286}
   item: {fileID: 106265823}
-  functioner: {fileID: 315940406}
+  functioner: {fileID: 0}
   timetoShoot: 0
   startTimeShot: 3
 --- !u!95 &186783110
@@ -624,17 +624,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 130788297, guid: f89c26eedde415f4499b3bb62bc9b746, type: 3}
   m_PrefabInstance: {fileID: 3791269369944239955}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &315940406 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6559607507042084979, guid: 960f89452e8aa824db5e7ba898d8f454, type: 3}
-  m_PrefabInstance: {fileID: 6559607506851450263}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c122709eac23eae4e94a891e1950326c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &345423267
 GameObject:
   m_ObjectHideFlags: 0
