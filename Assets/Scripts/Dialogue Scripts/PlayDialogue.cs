@@ -47,7 +47,11 @@ public class PlayDialogue : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (IsCompleted() && IsLastSentence() && IsFinalScene())
+                if (IsCompleted() && IsLastSentence() && IsFinalScene() && currScene.sceneName == "Ending")
+                {
+                    SceneManager.LoadScene(0);
+                }
+                else if (IsCompleted() && IsLastSentence() && IsFinalScene())
                 {
                     StartCoroutine(EnterLoad());
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
