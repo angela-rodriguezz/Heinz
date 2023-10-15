@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -230,7 +231,7 @@ public class GameManager : MonoBehaviour
     public void Die()
     {
         //WIP
-        return;
+        SceneManager.LoadScene("NoCharge");
     }
 
     //starts the final ending sequence.
@@ -238,7 +239,7 @@ public class GameManager : MonoBehaviour
     {
         //WIP
         Debug.Log("FULLY CHARGED");
-        return;
+        SceneManager.LoadScene("Charged");
     }
 
     //starts the tutorial sequence.

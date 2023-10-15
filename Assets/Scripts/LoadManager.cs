@@ -43,7 +43,7 @@ public class LoadManager : MonoBehaviour
         {
             //transition.SetTrigger("Fade_Out");
             FakeWaitForSeconds();
-            SceneManager.LoadScene("GameplayTEst");
+            SceneManager.LoadScene("Intro");
         }
 
     }
