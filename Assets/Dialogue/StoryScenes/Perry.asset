@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b84e5d59625c14ea27d29b183968e6, type: 3}
   m_Name: Perry
   m_EditorClassIdentifier: 
-  sceneName: 
+  sceneName: Ending
   sentences:
   - text: Of course! What more could I possibly want? What more could I possibly
       have?
@@ -39,5 +39,9 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
     voiceline: {fileID: 0}
     BG: {fileID: 21300000, guid: 62b84d4b9ed221f4b9d7e94bffe15d23, type: 3}
+  - text: ...
+    speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
+    voiceline: {fileID: 0}
+    BG: {fileID: 21300000, guid: fe72aaa421bc80f47acc9c62637fb1ec, type: 3}
   background: {fileID: 21300000, guid: 0ef40b2745007cd41947933bbc5d199a, type: 3}
   nextScene: {fileID: 0}
