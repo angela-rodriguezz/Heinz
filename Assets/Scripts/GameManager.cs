@@ -6,22 +6,36 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    #region charge
     [SerializeField] private Image chargeBar;
     [SerializeField] private float maxCharge;
     private float chargeLevel = 0;
     [SerializeField] private float addedCharge = 1;
     [SerializeField] private float chargeLoss = (float)0.2;
-    private bool canCharge;
+    
+    #endregion
 
+    #region health
     public float curHealth;
     [SerializeField] private float maxHealth;
     [SerializeField] private Image healthBar;
     [SerializeField] private float healthIncrease = (float)0.1;
+    #endregion
+
+    #region bools
+    [SerializeField] public bool canCharge;
+    //[SerializeField] Animator iconAnim;
+    [SerializeField] Sprite defIcon;
+    [SerializeField] Sprite chargeIcon;
+    [SerializeField] Image canChargeIcon;
+    #endregion
 
     // Start is called before the first frame update
     void Start()
     {
+        canCharge = false;
         curHealth = maxHealth;
+        UpdateCanChargeIcon();
     }
 
     // Update is called once per frame
@@ -35,10 +49,12 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && canCharge == false)
         {
             canCharge = true;
+            UpdateCanChargeIcon();
         }
         else if (Input.GetKeyDown(KeyCode.Q) && canCharge == true)
         {
             canCharge = false;
+            UpdateCanChargeIcon();
         }
         if (Input.GetKeyDown(KeyCode.Space) && canCharge)
         {
@@ -63,5 +79,21 @@ public class GameManager : MonoBehaviour
         healthBar.fillAmount = Math.Clamp(health / maxHealth, 0, 1);
         healthBar.color = Color.Lerp(Color.red, Color.green, health / maxHealth);
 
+    }
+
+    void UpdateCanChargeIcon()
+    {
+        if (canChargeIcon != null)
+        {
+            if (canCharge == false)
+            {
+                canChargeIcon.sprite = defIcon;
+            }
+            if (canCharge == true)
+            {
+                canChargeIcon.sprite = chargeIcon;
+            }
+        }
+        
     }
 }

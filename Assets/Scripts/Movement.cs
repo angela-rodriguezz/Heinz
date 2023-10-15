@@ -5,6 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     private Rigidbody2D rb;
+    GameManager gameManager;
 
     //SerializeField allows private variables to be seen and changed in the inspector
     [SerializeField] private float speed = 10.5f;
@@ -16,21 +17,25 @@ public class Movement : MonoBehaviour
     {
         //Get a reference to the attached RigidBody2D component
         rb = GetComponent<Rigidbody2D>();
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     void Update()
     {
         //Get user inputs
-
-        if (Input.GetKey(KeyCode.W))
+        if (gameManager.canCharge == false)
         {
-            ThrustUp();
-        }
+            if (Input.GetKey(KeyCode.W))
+            {
+                ThrustUp();
+            }
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            ThrustDown();
+            if (Input.GetKey(KeyCode.S))
+            {
+                ThrustDown();
+            }
         }
+        
 
         ClampVelocity();
     }
