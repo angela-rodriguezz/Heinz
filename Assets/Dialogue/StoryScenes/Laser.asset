@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b84e5d59625c14ea27d29b183968e6, type: 3}
+  m_Name: Laser
+  m_EditorClassIdentifier: 
+  sceneName: 
+  sentences:
+  - text: "You don\u2019t know what I want!"
+    speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
+    voiceline: {fileID: 0}
+  - text: "[Heinz smacks a button. Cut to city exploding and Heinz\u2019s lab coat
+      billows from the balcony above.]"
+    speaker: {fileID: 11400000, guid: 546ec0abce8252b4491b3e8a7d3d953e, type: 2}
+    voiceline: {fileID: 0}
+  - text: This. This city, this hell, engulfed in the very flames it set in me. This
+      is everything I wanted.
+    speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
+    voiceline: {fileID: 0}
+  - text: '[Heinz turns around to find the Agent on the ground. Panic sets into his
+      expression.]'
+    speaker: {fileID: 11400000, guid: 546ec0abce8252b4491b3e8a7d3d953e, type: 2}
+    voiceline: {fileID: 0}
+  - text: A- agent? Wake up! Witness my glory! Agent!
+    speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
+    voiceline: {fileID: 0}
+  - text: "[Heinz crumbles to the ground next to the Agent\u2019s unmoving body.]"
+    speaker: {fileID: 11400000, guid: 546ec0abce8252b4491b3e8a7d3d953e, type: 2}
+    voiceline: {fileID: 0}
+  - text: "Perry\u2026 what have I done?"
+    speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
+    voiceline: {fileID: 0}
+  background: {fileID: 0}
+  nextScene: {fileID: 0}
