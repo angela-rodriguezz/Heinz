@@ -98,6 +98,7 @@ public class GameManager : MonoBehaviour
             chargeTimer -= Time.deltaTime;
         }
         UpdateCanCharge();
+        SetHealth(curHealth);
     }
 
     void AddBarCharge()

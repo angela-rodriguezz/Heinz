@@ -12,6 +12,7 @@ public class Perry : MonoBehaviour
     #region Shooting Mechanic Variables
     public float timetoShoot;
     public float startTimeShot;
+    [SerializeField] float randomTime = 1.0f;
 
     #endregion
 
@@ -28,11 +29,21 @@ public class Perry : MonoBehaviour
         if (timetoShoot <= 0)
         {
             GameObject projectile = Instantiate(item, transform.position, Quaternion.identity);
-            projectile.SetActive(true);
-            timetoShoot = startTimeShot;
+            //projectile.SetActive(true);
+            timetoShoot = startTimeShot + Random.Range(-randomTime/2, + 2 * randomTime);
         } else
         {
             timetoShoot -= Time.deltaTime;
         }
+    }
+
+    void Stun()
+    {
+
+    }
+
+    IEnumerator StunRoutine()
+    {
+        yield return null;
     }
 }

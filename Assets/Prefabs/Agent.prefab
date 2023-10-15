@@ -125,10 +125,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drDoof: {fileID: 0}
-  item: {fileID: 0}
+  item: {fileID: 6613499270297537728, guid: e25de30e58a53a54391ea3ee93a9fd5c, type: 3}
   functioner: {fileID: 0}
   timetoShoot: 0
-  startTimeShot: 3
+  startTimeShot: 1
+  randomTime: 1
 --- !u!61 &5939481515930684494
 BoxCollider2D:
   m_ObjectHideFlags: 0

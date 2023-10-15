@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7762091203544107998}
   m_Layer: 0
   m_Name: Shield
-  m_TagString: Untagged
+  m_TagString: FLOOR
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7762091203544108004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.23, y: -7.11, z: 0.012152212}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_LocalPosition: {x: -3.98, y: -6.69, z: 0.012152212}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7762091205094020443}
@@ -124,7 +124,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -3.2115145, y: 0.807554}
-  m_ConnectedAnchor: {x: 2.1084855, y: -3.539113}
+  m_ConnectedAnchor: {x: 1.7731007, y: -3.5616772}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnim: {fileID: 0}
-  speed: 10.5
+  speed: 15
   rotationSpeed: 2
 --- !u!1 &7762091203632202970
 GameObject:
@@ -192,7 +192,7 @@ Transform:
   m_GameObject: {fileID: 7762091203632202970}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.415464, y: -5.190459, z: 0.012152212}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7762091205094020443}
@@ -326,7 +326,7 @@ Transform:
   m_GameObject: {fileID: 7762091205042263638}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -7.22, y: -3.85, z: 0.012152212}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7762091205094020443}
@@ -446,7 +446,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -1.411684, y: 3.0180836}
-  m_ConnectedAnchor: {x: -2.4843986, y: 4.805362}
+  m_ConnectedAnchor: {x: -2.6494312, y: 5.080328}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -466,7 +466,7 @@ GameObject:
   - component: {fileID: 7762091205094020443}
   m_Layer: 0
   m_Name: Robot Arm
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
