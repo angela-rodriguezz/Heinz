@@ -1973,6 +1973,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 931271160, guid: f89c26eedde415f4499b3bb62bc9b746, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -74.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 931271161, guid: f89c26eedde415f4499b3bb62bc9b746, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 93a74a24a5fe79140a8f738d3dfeeb9a, type: 2}
+    - target: {fileID: 931271161, guid: f89c26eedde415f4499b3bb62bc9b746, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 751543564937191187, guid: 93a74a24a5fe79140a8f738d3dfeeb9a, type: 2}
     - target: {fileID: 3370111501976842594, guid: f89c26eedde415f4499b3bb62bc9b746, type: 3}
       propertyPath: m_Name
       value: Canvas

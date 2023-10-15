@@ -6,10 +6,10 @@ using TMPro;
 
 public class ChooseOptionController : MonoBehaviour
 {
-    public Color defaultColor;
+    public Color defaultColor = Color.white;
     public Color hoverColor;
     private Scenes scene;
-    private TextMeshProUGUI textMesh;
+    public TextMeshProUGUI textMesh;
     public SelectionScreen controller;
     public Button btn1;
     public Button btn2;
@@ -19,6 +19,7 @@ public class ChooseOptionController : MonoBehaviour
     {
         textMesh = GetComponent<TextMeshProUGUI>();
         textMesh.color = defaultColor;
+        
     }
 
     void Start()

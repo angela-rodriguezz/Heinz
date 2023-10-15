@@ -194,7 +194,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 93a74a24a5fe79140a8f738d3dfeeb9a, type: 2}
-  m_sharedMaterial: {fileID: 751543564937191187, guid: 93a74a24a5fe79140a8f738d3dfeeb9a, type: 2}
+  m_sharedMaterial: {fileID: 4177162176556366520, guid: 93a74a24a5fe79140a8f738d3dfeeb9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -533,7 +533,7 @@ MonoBehaviour:
   m_text: Button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 93a74a24a5fe79140a8f738d3dfeeb9a, type: 2}
-  m_sharedMaterial: {fileID: 751543564937191187, guid: 93a74a24a5fe79140a8f738d3dfeeb9a, type: 2}
+  m_sharedMaterial: {fileID: 4177162176556366520, guid: 93a74a24a5fe79140a8f738d3dfeeb9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -674,6 +674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColor: {r: 0, g: 0, b: 0, a: 0}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
+  textMesh: {fileID: 1077129350}
   controller: {fileID: 1173984416}
   btn1: {fileID: 1173984417}
   btn2: {fileID: 1442245462}
@@ -758,7 +759,7 @@ MonoBehaviour:
   m_text: Button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 93a74a24a5fe79140a8f738d3dfeeb9a, type: 2}
-  m_sharedMaterial: {fileID: 751543564937191187, guid: 93a74a24a5fe79140a8f738d3dfeeb9a, type: 2}
+  m_sharedMaterial: {fileID: 4177162176556366520, guid: 93a74a24a5fe79140a8f738d3dfeeb9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1035,7 +1036,7 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 93a74a24a5fe79140a8f738d3dfeeb9a, type: 2}
-  m_sharedMaterial: {fileID: 751543564937191187, guid: 93a74a24a5fe79140a8f738d3dfeeb9a, type: 2}
+  m_sharedMaterial: {fileID: 4177162176556366520, guid: 93a74a24a5fe79140a8f738d3dfeeb9a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
