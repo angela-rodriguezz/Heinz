@@ -42,7 +42,7 @@ MonoBehaviour:
   - text: "You can\u2019t\u2013 This isn\u2019t you, Heinz. You\u2019re better than
       this. You don\u2019t have to be the\u2013 "
     speaker: {fileID: 11400000, guid: 20b2394b0c78105429770c4840e0fa1c, type: 2}
-    voiceline: {fileID: 0}
+    voiceline: {fileID: 8300000, guid: 2efe7b87938a54e45bfe5be25478b720, type: 3}
   - text: '[The screen zaps out as Heinz ends the call, looking down as he does.
       He hangs his head for a moment before looking right back up at the player/camera/Device-N8R.] '
     speaker: {fileID: 11400000, guid: 546ec0abce8252b4491b3e8a7d3d953e, type: 2}

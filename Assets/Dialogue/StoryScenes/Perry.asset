@@ -17,18 +17,15 @@ MonoBehaviour:
   - text: Of course! What more could I possibly want? What more could I possibly
       have?
     speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
-    voiceline: {fileID: 0}
+    voiceline: {fileID: 8300000, guid: 15062c46b3736424e9567ec128b1a2cf, type: 3}
   - text: "You\u2026 have me."
     speaker: {fileID: 11400000, guid: 20b2394b0c78105429770c4840e0fa1c, type: 2}
-    voiceline: {fileID: 0}
+    voiceline: {fileID: 8300000, guid: f2c655f2eb91b7a4ea8914acea60e557, type: 3}
   - text: '[Cut to Heinz, looking surprised.]'
     speaker: {fileID: 11400000, guid: 546ec0abce8252b4491b3e8a7d3d953e, type: 2}
     voiceline: {fileID: 0}
   - text: 'You wanted a savior. Let me save you. '
     speaker: {fileID: 11400000, guid: 20b2394b0c78105429770c4840e0fa1c, type: 2}
-    voiceline: {fileID: 0}
-  - text: 'You wanted a savior. Let me save you. '
-    speaker: {fileID: 11400000, guid: 20b2394b0c78105429770c4840e0fa1c, type: 2}
-    voiceline: {fileID: 0}
+    voiceline: {fileID: 8300000, guid: af8b492215883594f8faa7f7f1bfd1c2, type: 3}
   background: {fileID: 0}
   nextScene: {fileID: 0}
