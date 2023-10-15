@@ -16,6 +16,7 @@ public class Scenes : GameScene
     {
         public string text;
         public Speakers speaker;
+        public AudioClip voiceline;
     }
 }
 

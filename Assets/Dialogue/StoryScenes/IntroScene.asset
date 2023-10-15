@@ -12,7 +12,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b84e5d59625c14ea27d29b183968e6, type: 3}
   m_Name: IntroScene
   m_EditorClassIdentifier: 
-  sceneName: 
-  sentences: []
-  background: {fileID: 0}
+  sceneName: Intro
+  sentences:
+  - text: "[Machinery whirring ominously on a black screen, before a \u201Cding\u201D
+      sound is heard.]"
+    speaker: {fileID: 11400000, guid: 546ec0abce8252b4491b3e8a7d3d953e, type: 2}
+    voiceline: {fileID: 0}
+  - text: "It\u2019s done\u2026 It's finally done."
+    speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
+    voiceline: {fileID: 8300000, guid: 4f1480542286d79488563edab8194dee, type: 3}
+  - text: "[The light of the Device-N8R illuminates Heinz\u2019s proud but haggard
+      face as he looks at the player, as the camera/perspective is positioned right
+      at where the machine is.]"
+    speaker: {fileID: 11400000, guid: 546ec0abce8252b4491b3e8a7d3d953e, type: 2}
+    voiceline: {fileID: 0}
+  - text: "You will right every wrong that\u2019s been done to me. My savior. My
+      pride."
+    speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
+    voiceline: {fileID: 8300000, guid: a183ad5c03bf3b943a0ff29a80be1367, type: 3}
+  - text: '[Another screen lights up in the background as The Agent buzzes in.]'
+    speaker: {fileID: 11400000, guid: 546ec0abce8252b4491b3e8a7d3d953e, type: 2}
+    voiceline: {fileID: 0}
+  - text: "Doctor\u2013 What is that thing? What have you done?"
+    speaker: {fileID: 11400000, guid: 20b2394b0c78105429770c4840e0fa1c, type: 2}
+    voiceline: {fileID: 0}
+  - text: Only what is right.
+    speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
+    voiceline: {fileID: 8300000, guid: 38957658643c6b24ba77dd4f8ae03dff, type: 3}
+  - text: "You can\u2019t\u2013 This isn\u2019t you, Heinz. You\u2019re better than
+      this. You don\u2019t have to be the\u2013 "
+    speaker: {fileID: 11400000, guid: 20b2394b0c78105429770c4840e0fa1c, type: 2}
+    voiceline: {fileID: 0}
+  - text: '[The screen zaps out as Heinz ends the call, looking down as he does.
+      He hangs his head for a moment before looking right back up at the player/camera/Device-N8R.] '
+    speaker: {fileID: 11400000, guid: 546ec0abce8252b4491b3e8a7d3d953e, type: 2}
+    voiceline: {fileID: 0}
+  - text: "Looks like I\u2019m the bad guy."
+    speaker: {fileID: 11400000, guid: 8d849217ac91d404c8e702fcda4bff44, type: 2}
+    voiceline: {fileID: 8300000, guid: ae57765f28e425c42a03985f848bb236, type: 3}
+  background: {fileID: 21300000, guid: 0fdb54a05124cd74d939fde8f30efb89, type: 3}
   nextScene: {fileID: 0}

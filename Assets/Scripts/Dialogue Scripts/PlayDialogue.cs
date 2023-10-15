@@ -2,12 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
 
 public class PlayDialogue : MonoBehaviour
 {
     [SerializeField] private GameScene currentScene;
     [SerializeField] private DialogueManager bottomBar;
-    public Transition backgroundController;
+    [SerializeField] private TextMeshProUGUI barText, personNameText;
+    [SerializeField] private Scenes currScene;
+    [SerializeField] private AudioSource voice;
+    private int sentenceIndex = -1;
+    private StateTwo state2 = StateTwo.COMPLETED;
+    private IEnumerator lineAppear;
+    public bool finished;
     public SelectionScreen chooseController;
     public static bool gameOver = false;
 
@@ -26,8 +34,8 @@ public class PlayDialogue : MonoBehaviour
         if (currentScene is Scenes)
         {
             Scenes storyScene = currentScene as Scenes;
-            bottomBar.PlayScene(storyScene);
-            backgroundController.StartImage(storyScene.background);
+            PlayScene(storyScene);
+            StartImage(storyScene.background);
         }
     }
 
@@ -38,32 +46,35 @@ public class PlayDialogue : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (bottomBar.IsCompleted() && bottomBar.IsLastSentence() && bottomBar.IsFinalScene())
+                if (IsCompleted() && IsLastSentence() && IsFinalScene())
                 {
                     StartCoroutine(EnterLoad());
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
-                else if (bottomBar.IsCompleted())
+                else if (IsCompleted() && !voice.isPlaying)
                 {
-                    if (state == State.IDLE && bottomBar.IsLastSentence())
+                    if (state == State.IDLE && IsLastSentence())
                     {
                         PlayScene((currentScene as Scenes).nextScene);
                     }
                     else
                     {
-                        bottomBar.PlayNextSentence();
+                        PlayNextSentence();
                     }
 
                 }
                 else
                 {
-                    bottomBar.finished = true;
-                    bottomBar.FinishSentence();
+                    finished = true;
+                    voice.Stop();
+                    FinishSentence();
                 }
 
             }
         }
     }
+
+    #region Decides Scene Type
 
     // wait until loading next level
     private IEnumerator EnterLoad()
@@ -97,13 +108,13 @@ public class PlayDialogue : MonoBehaviour
         if (scene is Scenes)
         {
             Scenes storyScene = scene as Scenes;
-            if (backgroundController.CheckImage(storyScene.background) && bottomBar.IsLastSentence())
+            if (CheckImage(storyScene.background) && IsLastSentence())
             {
-                backgroundController.SwitchImage(storyScene.background);
+                SwitchImage(storyScene.background);
                 yield return new WaitForSeconds(1f);
             }
 
-            bottomBar.PlayScene(storyScene);
+            PlayScene(storyScene);
             state = State.IDLE;
         }
         else if (scene is ChooseScene)
@@ -112,4 +123,135 @@ public class PlayDialogue : MonoBehaviour
             chooseController.SetupChoose(scene as ChooseScene);
         }
     }
+
+    #endregion
+
+    #region Shows Dialogue
+
+    private enum StateTwo
+    {
+        PLAYING, COMPLETED
+    }
+
+    public void ClearText()
+    {
+        barText.text = "";
+    }
+
+    // plays the current scene and starts playing the next sentence
+    // starts negative since we are adding each time
+    public void PlayScene(Scenes scene)
+    {
+        currScene = scene;
+        sentenceIndex = -1;
+        PlayNextSentence();
+    }
+
+    public bool IsCompleted()
+    {
+        return state2 == StateTwo.COMPLETED;
+    }
+
+    public bool IsLastSentence()
+    {
+        return sentenceIndex + 1 == currScene.sentences.Count;
+    }
+
+    public bool IsFinalScene()
+    {
+        return currScene.nextScene == null;
+    }
+
+    // If the player double clicks, the state is now complete, the coroutine stops, and now the text immediately shows the sentence immediately
+    public void FinishSentence()
+    {
+        state2 = StateTwo.COMPLETED;
+        StopCoroutine(lineAppear);
+        finished = false;
+        barText.text = currScene.sentences[sentenceIndex].text;
+
+    }
+
+    // unless there is no next sentence in the scene and the text is completed, this function plays the next sentence
+    // we get one of the sentences in the list from the current sentence index and enter it into the coroutine
+    // change the player name or color if the speaker changes
+    public void PlayNextSentence()
+    {
+        if (!IsLastSentence() && !finished)
+        {
+            lineAppear = TypeText(currScene.sentences[++sentenceIndex].text);
+            if (currScene.sentences[sentenceIndex].voiceline != null)
+            {
+                voice.clip = currScene.sentences[sentenceIndex].voiceline;
+                voice.Play();
+            }
+            StartCoroutine(lineAppear);
+            personNameText.text = currScene.sentences[sentenceIndex].speaker.speakerName;
+            personNameText.color = currScene.sentences[sentenceIndex].speaker.textColor;
+        }
+    }
+
+    // designates that the dialogue is playing and sets the text to empty 
+    // starts the index at 0 and continues until the state is complete
+    // adds each letter into the text box from the intended string to be returned
+    // yield return changes timing of when text appears
+    // if the index ever equals the text length, the state is now completed and the enumerator ends
+    private IEnumerator TypeText(string text)
+    {
+        barText.text = "";
+        state2 = StateTwo.PLAYING;
+        int wordIndex = 0;
+
+        while (state2 != StateTwo.COMPLETED)
+        {
+            barText.text += text[wordIndex];
+            yield return new WaitForSeconds(0.05f);
+            if (++wordIndex == text.Length)
+            {
+                state2 = StateTwo.COMPLETED;
+                break;
+            }
+        }
+    }
+
+    #endregion
+
+    #region Transitions Backgrounds
+    public bool isSwitched = false;
+    public Image background1;
+    public Image background2;
+
+    // checks if the current scene's background isn't null
+    public bool CheckImage(Sprite sprite)
+    {
+        return sprite != null;
+    }
+    // starts changing the backgrounds
+    public void SwitchImage(Sprite sprite)
+    {
+        SetImage(sprite);
+    }
+
+    public void StartImage(Sprite sprite)
+    {
+        background1.sprite = sprite;
+    }
+    // if the background isn't switched...
+    // the background sprite is changed to the new background, the fading animation begins, and is now switched
+    // if the background is switched
+    // change back to the previous background, reverse fading animation begins, and is now not switched
+    public void SetImage(Sprite sprite)
+    {
+        if (!isSwitched)
+        {
+            background2.sprite = sprite;
+            isSwitched = !isSwitched;
+        }
+        else if (isSwitched)
+        {
+            background1.sprite = sprite;
+            isSwitched = !isSwitched;
+        }
+    }
+    #endregion
 }
