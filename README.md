@@ -7,4 +7,10 @@ A 2D strategy battle game which includes both a dialogue, choice, and battle sys
 
 [Click here!](https://angelarodriguezz.itch.io/heinz)
 
+## Gameplay Mechanics
+
+## Game Design Document
+
+[Click here!](https://docs.google.com/document/d/1JU8e54ooc9jRMFTA-8gXv9BZUetkONFmM68PtjeeyEs/edit#heading=h.ywudmm9pog3d)
+
 Made for Bear Jam Fall'23
